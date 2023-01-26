@@ -1,0 +1,39 @@
+comando git bash
+
+
+$ ls // muestra una lista de todos los archivos y carpetas que se encuentren en un 
+determinado directorio/carpeta
+$ pwd // me idica en que directorio me encuentro
+$ cd  // para ingresar a las carpetas. luego de cd coloco la carpeta a la cual quiero
+ acceder cd + espacio + directorio. si quiero acceder a una carpeta debo de colocar el nombre
+tal cual se muestra en ls
+$ cd .. // retrocede una carpeta
+$ cd ~ // retrocede hasta el principio
+$ mkdir 'nombre de la nueva carpeta' // crea nuevas carpetas en el directorio donde nos encontremos
+$ ls -a // muestra todos los directorios, hasta los que estan ocultos.
+$ code . // indica que habra la carpeta en el editor de codigo que selecionamos como predeterminado
+$ echo > archivo.txt // puedo crear un archivo en la carpeta que me encuentre en ese momento
+$ git init // crea un nuevo repositor, es una carpeta oculta que se encuentra en la misma carpeta que el archivo.
+$ git status // el estado actual de nmuestro repositorio. untracks files: archivos que no esta "registrados".
+cuando aparecen en verde es porque estan listos para ser commit y cuando estan en rojo es porque son untracked files.
+$ git add archivo.txt // agrega el archivo a stages
+$ git commit -m "comentario de la razon por la cual genere este nuevo commit"// crea un commit
+//si el archivo no lo guarde en el editor de texto, en el status no va a aparecer un nuevo archivo para agregar a
+stages//
+//luego de crear un commit git me indicara la cantidad de archivos que modifique y la cantidad de lineas totales o la cantidad de lineas agregadas y/o eliminadas//
+$ git rm --cached archivo.txt // todos los archivos que esten en stages cuando genere un nuevo commit va a ser para todos. 
+si yo no quiero un nuevo commit para un archivo pero para el otro si (y ambos estan en stages) debo de usar este comando y
+mencionar el archivo que quiero sacar de stages
+$ git log // me muestra todas los commit del repositorio.
+(HEAD -> master) // me indica en el commit en el que me encuentro y en la rama en la que estoy
+$ git checkout 5221sgs2d4g2 // git checkout + codigo del commit al cual queremos visualizar en el editor de texto
+//al volver a un commit anterior se crea por defecto una rama paralela a partir del commit seleccionado y si genero un nuevo commit. si no realizo ningun commit la rama desaparece//
+$ git branch // visualiza todas las ramas del repositorio y en color me indica en cual estoy parada
+$ git switch -c "nombre-de-la-nueva-rama" // creo una nueva rama o renombro la rama en la que me encuentro
+$ git switch master // git switch + nombre de la rama a la cual quiero acceder
+$ rm archivo.txt // elimina el archivo, debo de añadirlo a stages y realizar un commit para que se guarde este nuevo cambio
+$ git restore --stage archivo1.txt // recupera al archivo eliminado que se encontraba en stage
+$ git restore archivo.txt // devuelve al archivo donde estaba
+
+
+
