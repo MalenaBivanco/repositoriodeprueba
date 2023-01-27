@@ -31,6 +31,7 @@ $ git checkout 5221sgs2d4g2 // git checkout + codigo del commit al cual queremos
 //al volver a un commit anterior se crea por defecto una rama paralela a partir del commit seleccionado y si genero un nuevo commit. si no realizo ningun commit la rama desaparece//
 $ git branch // visualiza todas las ramas del repositorio y en color me indica en cual estoy parada
 $ git switch -c "nombre-de-la-nueva-rama" // creo una nueva rama o renombro la rama en la que me encuentro
+$ git checkout -b nombre-de-la-nueva-rama // crea una nueva rama
 $ git switch master // git switch + nombre de la rama a la cual quiero acceder
 $ rm archivo.txt // elimina el archivo, debo de añadirlo a stages y realizar un commit para que se guarde este nuevo cambio
 $ git rm archivo.txt // elimina el archivo y lo sube a stages. 
@@ -53,6 +54,6 @@ en que linea comienza el agrgado de nuevas lineas. n4 cantidad de lineas agrgada
 
 // para salir cuando no puedo apretar ningun comando debo presionr la letra q //
 
-
+$ cat archivo.txt // muestra lo que contiene ese archivo
 
 
