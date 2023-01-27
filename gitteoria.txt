@@ -26,14 +26,33 @@ si yo no quiero un nuevo commit para un archivo pero para el otro si (y ambos es
 mencionar el archivo que quiero sacar de stages
 $ git log // me muestra todas los commit del repositorio.
 (HEAD -> master) // me indica en el commit en el que me encuentro y en la rama en la que estoy
+$git log --oneline //muetra todos los commit con su hash y comentario.
 $ git checkout 5221sgs2d4g2 // git checkout + codigo del commit al cual queremos visualizar en el editor de texto
 //al volver a un commit anterior se crea por defecto una rama paralela a partir del commit seleccionado y si genero un nuevo commit. si no realizo ningun commit la rama desaparece//
 $ git branch // visualiza todas las ramas del repositorio y en color me indica en cual estoy parada
 $ git switch -c "nombre-de-la-nueva-rama" // creo una nueva rama o renombro la rama en la que me encuentro
 $ git switch master // git switch + nombre de la rama a la cual quiero acceder
 $ rm archivo.txt // elimina el archivo, debo de añadirlo a stages y realizar un commit para que se guarde este nuevo cambio
+$ git rm archivo.txt // elimina el archivo y lo sube a stages. 
 $ git restore --stage archivo1.txt // recupera al archivo eliminado que se encontraba en stage
 $ git restore archivo.txt // devuelve al archivo donde estaba
+
+$ mv archivo.txt nuevonombre.txt // escribo el nombre del archivo y el nombre que le quiero otorgas
+$ git add archivo.txt nuevonombre.txt // subo el renombre a stages
+$ git mv archivo.txt nuevonombre.txt  // lo renombre y a stages
+
+$git status -s // me muestra el estatus pero con menos info. al lado de los archivos modificados pero no subidos a stages aparece
+una M roja, al lado de los archivoc modificados y subidos a stage me aparece una M verde, y al lado de los archivos a los cuales git todavia no les lleva
+una registro aparecen con ??, y una vez que agregamos ese archivo desconocido a stages me aparece una A (de add)
+
+$git diff // me muestra los cambios que realice de una manera mucho mas visual, me muestra el codigo, en rojo las lineas en las cuales borramos algo
+y en verde las lineas en laas cuales agregamos algo. muestra los cambios de los archivos que todavia no subi a stage.
+$git diff --staged// los cambios que realice en los archivos que ya se encuentran en la etapa de stage
+@@ -n1,n2 +n3,n4 @@ // -n1 indica en que linea comienza el cambio y que son lineas borradas. n2 me indica la cantidad de lienas borradas. +n3 indica
+en que linea comienza el agrgado de nuevas lineas. n4 cantidad de lineas agrgadas. todo en base a los cambios que realice en el codigo que habia cuando utilice el comando diff en primer instancia
+
+// para salir cuando no puedo apretar ningun comando debo presionr la letra q //
+
 
 
 
